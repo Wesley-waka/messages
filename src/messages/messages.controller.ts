@@ -7,9 +7,7 @@ import { MessagesRepository } from './message.repository';
 @Controller('messages')
 export class MessagesController {
 
-  constructor(public messagesService: MessagesService){
-
-  }
+  constructor(public messagesService: MessagesService){}
 
 
   @Get()

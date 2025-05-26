@@ -3,13 +3,8 @@ import { MessagesRepository } from "./message.repository";
 
 @Injectable()
 export class MessagesService{
-  messagesRepo: MessagesRepository;
-
-
-  constructor(){
-    //service is creating its own dependencies
-    // DONT DO THIS ON REAL APPS
-    this.messagesRepo = new MessagesRepository();
+  
+  constructor(public messagesRepo: MessagesRepository){
   }
 
   async findOne(id: string){
